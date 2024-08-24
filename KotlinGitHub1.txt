@@ -1,0 +1,127 @@
+//Let's get started with Kotlin
+
+fun main() {
+    val kotlin = "🙂"
+    print("Hello World")
+    println(kotlin)
+  println("I am learning Kotlin.")
+    
+}
+
+fun main(){
+    var myname="Anjali Kumari"   //var can be changed/modified
+    val num1=290                 //but val cannot be changed/modified
+    myname="Anjali Arya"
+    println(myname)
+    println(num1)
+}
+
+ /*For printing name & age both the codes are correct.
+  Kotlin can understand that "Anjali Kumari" a String, and 19 is an Int.
+  It is also possible to declare the type and it would not harm your code.*/
+  
+
+fun main(){
+    val name="Anjali kumari"
+    val age=19
+    println("My name is $name and i'm $age")
+}
+
+fun main(){
+    val name:String="Anjali Kumari"
+    val age:Int=19
+    println(name)
+    println(age)
+}
+
+//Concatenation of two Strings
+
+fun main(){
+    val myfirstname="Anjali"
+    val mylastname=" Kumari"
+    print(myfirstname+mylastname)
+}
+
+//The $ sign in Kotlin is used for string interpolation, allowing variables or expressions to be embedded directly into a string.
+
+fun main(){
+    val num1=26
+    val num2=62
+    print("The sum of $num1 and $num2 is ${num1+num2}") 
+}
+
+//Data Types
+
+fun main(){
+    var num:Int=19
+    var str:String="Anjali Kumari"
+    var num1:Double=78.95
+    var value1:Boolean=true
+    var char1:Char='A'
+    println("$str $num $value1 $char1 $num1")
+}
+
+
+//Arithmetic Operations
+
+fun main(){
+    var num1=24
+    var num2=12
+    println(num1+num2)
+    println(num1-num2)
+    println(num1*num2)
+    println(num1/num2)
+    println(++num2)
+    println(--num2)
+    
+}
+
+//Assignment Operators
+
+fun main(){
+    var num1=78
+    var num2=12
+    num1+=3
+    num2*=2
+    println(num1)     //now value of num1 has changed
+    println(num2)    //now value of num2 has changed
+    num1-=5
+    num2+=3
+    println(num1)
+    println(num2)
+}
+
+//Comparison Operators
+
+fun main(){
+    var num1=24
+    var num2=12
+    var num3=num1/num2
+    if(num3==2){
+        if(num3!=2){
+            println("We will perform in else part that's why we have given wrong condition here.")
+        }
+        else{
+            println("we are able to perform comparison operators.")
+        }
+        
+    }else{
+        println("Code is not correct.")
+    }
+    
+}
+
+//Logical Operators
+
+fun main(){
+    val value1:Boolean=true
+    val value2:Boolean=false
+    println(value1&&value2)
+    println(value1||value2)
+    println(!value1)
+}
+
+
+
+
+ 
