@@ -1,0 +1,142 @@
+/*Write a function in Kotlin that declares a variable inside the function, prints the variable within the function, 
+and then attempt to print the same variable outside the function*/
+
+fun main(){
+    myfun1()
+}
+fun myfun1(){
+    var number=25
+    print(number)
+}
+
+//Safe Casting: Safe casting (as?) in Kotlin attempts to cast a variable to a specific type and returns null if the cast fails.
+
+fun main(){
+    var a:String="Hi"
+    val b:Int?=a as? Int
+    println(b)  //throws null
+}
+
+ fun main(){
+    var a:String="100"
+    val b:Int?=a as? Int
+    println(b) //throws null
+}
+
+fun main() {
+    var a: String = "100"
+    val b: Int? = a.toInt()
+    if (b != null) {
+        println("conversion successful")
+    } else {
+        println("conversion failed")
+    }
+}
+
+//Unsafe Casting: Unsafe casting (as) in Kotlin attempts to cast a variable to a specific //type and throws a ClassCastException if the cast fails.
+
+fun main() {
+    val obj: Any = "Hello"
+    val num: Int = obj as Int
+    println(num) //gives you an error
+}
+
+//Kotlin if-else
+
+fun main(){
+    var name1="Kotlin"
+    val name2="Playgrpund"
+    if(name1==name2){
+        println("Both name1 and name2 are equal/same")
+    }else{
+        println("name1 and name2 are not same/equal")
+    }
+}
+
+//nested-if else
+
+fun main(){
+    var num1=36
+    var num2=12
+    var num3=num1/num2
+    if(num3==3){
+        if(num3/3==1){
+            println("Nested if-else")
+        }else{
+            println("we are not able to write the code")
+        }
+    }else {
+        println("Our if condition is correct so else condition would not be executed")
+    }
+    
+}
+
+//if else-if else
+
+fun main(){
+    var num1 =10
+    if(num1>10){
+        println("num1 is greater than 10")
+    }else if(num1==10){
+        println("num1 is equal to 10")
+    }else{
+        println("Nothing")
+    }
+}
+
+// Kotlin for-Loop
+
+fun main(){
+for (i in (1..5).reversed()) {
+    println(i) // output 5 4 3 2 1
+}
+}
+
+fun main(){
+for (i in 1..5) {
+    println(i) // output 1 2 3 4 5
+}
+}
+
+ fun main(){
+     for(i in 1 until 5){
+     println(i)  // output 1 2 3 4
+     }
+ }
+
+fun main(){
+    for (i in 10 downTo 1 step 2) {
+    println(i)   //output 10 8 6 4 2   
+}
+}
+
+fun main(){
+    for (i in 5 downTo 1) {
+    println(i)
+    }
+}
+
+fun main(){
+val names = arrayOf("Anjali", "Rd", "Shabnam", "Bhumi")
+for (x in names) {
+  println(x)
+}
+}
+
+ fun main() {
+    var values=listOf("A","B","C","D","E")
+    for(i in values){
+    println(i)
+    }
+}
+
+fun main(){
+    val str1 = arrayOf("Hi ", "Hello ", "123 ")
+    for (i in str1.indices) {
+        println("Index: $i, Value: ${str1[i]}")
+    }
+}
+
+
+
+
