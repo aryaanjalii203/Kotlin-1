@@ -1,0 +1,132 @@
+
+//demonstrating Function Calls with and without Default Parameter Values in Kotlin
+ 
+fun mymain(){
+    println("Anjali Arya")
+}
+fun main(){
+    mymain()
+}
+
+//A parameter is a variable defined in a function's signature to accept input, 
+//while an argument is the actual value passed to the function when it is called.
+
+fun mymain(){
+    val num1=20
+    val num2=30
+    print("Sum of $num1 and $num2 is ${num1+num2}")
+}
+fun main(){
+   mymain()
+}
+
+//another ways 
+
+fun mmain(num1:Int, num2:Int){
+    val num3=num1+num2
+    println(num3)
+}
+fun main(){
+    mmain(23,45)
+}
+
+fun mmain(num1:Int=6, num2:Int=4){ //default values of num1 and  num2
+    val num3=num1+num2
+    println(num3)
+}
+fun main(){
+    mmain()
+}
+
+fun mmain(num1:Int=9,num2:Int=8){
+    if(num1>num2){
+        println("Yes,it is greater than 8")
+    }else{
+    println("It is not greater than 9")
+    }
+}
+
+//Fahrenheit to Celsius, subtract 30 then divide by 2.
+//Celsius to Fahrenheit, multiply by 2 then add 30.
+
+fun CelsiustoFahrenheit(num1: Int = 60) {
+    val num3 = (num1 - 30) / 2
+    println("$num1°F to Celsius is $num3°C")
+}
+
+fun FahrenheittoCelsius(num2: Int = 23) {
+    val num4 = (num2 * 2) + 30
+    println("$num2°C to Fahrenheit is $num4°F")
+}
+
+fun main() {
+    FahrenheittoCelsius()
+    CelsiustoFahrenheit()
+}
+
+//By using return type
+
+fun ctof(num1: Int = 60): Int {
+    val num3 = (num1 - 30) / 2
+    return num3
+}
+
+fun ftoc(num2: Int = 23): Int {
+    val num4 = (num2 * 2) + 30
+    return num4
+}
+
+fun main() {
+    val celsius = ctof(60)
+    println("60°F to Celsius is $celsius°C")
+
+    val fahrenheit = ftoc(23)
+    println("23°C to Fahrenheit is $fahrenheit°F")
+}
+
+//By taking input from user
+
+fun ctof(){
+    println("Write temperature in Celsius: ")
+    val num1 = readLine()?.toIntOrNull() ?: return
+    val num2 = (num1 * 9 / 5) + 32
+    println("$num1°C is equal to $num2°F")
+} 
+
+fun ftoc(){
+    println("Write temperature in Fahrenheit: ")
+    val num2 = readLine()?.toIntOrNull() ?: return
+    val num4 = (num2 - 32) * 5 / 9
+    println("$num2°F is equal to $num4°C")
+}
+
+fun main(){
+    ctof()
+    ftoc()
+}
+
+//How to input from the user for all the datatypes- String, Int, Double, Boolean
+
+fun main(){
+println("Enter a string:")
+val stringInput = readLine() ?: ""
+println("You entered: $stringInput")
+}
+
+fun main(){
+    println("Enter a number")
+    val intInput=readLine()?.toIntOrNull()?:0
+    println(intInput)
+}
+
+fun main(){
+	println("Enter a double")
+    val doubleInput=readLine()?.toDoubleOrNull()?:0.0
+   println(doubleInput)
+}
+
+fun main(){
+    println("Enter a boolean  value")
+    val boolvalue=readLine()?.toBoolean()?:false
+    println(boolvalue)
+}
