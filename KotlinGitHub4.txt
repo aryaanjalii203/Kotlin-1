@@ -1,0 +1,148 @@
+fun main() {
+    val kotlin = "🙂"
+    println(kotlin)
+}
+
+//User define function and calling of that function
+
+fun student(name: String , roll_no: Int , grade: Char) {
+    println("Name of the student is : $name")
+    println("Roll no of the student is: $roll_no")
+    println("Grade of the student is: $grade")
+}
+
+fun main(){
+    student("Anjali",12206589,'A')
+    student("Rassi",12210160,'I')
+}
+
+
+ //Kotlin Standard Library Function
+
+fun main(){
+    val sumofNum=listOf(12,13,14,15,16,17,18,19,20).sum()
+    println("sum of all the elements is $sumofNum") //144
+}
+
+fun main(){
+    val sumofNum=listOf(12,13,14,15,16,17,18,19,20).max()
+    println("sum of all the elements is $sumofNum")  //20
+}
+
+fun main(){
+    val sumofNum=listOf(12,13,14,15,16,17,18,19,20).min()
+    println("sum of all the elements is $sumofNum")  //12
+}
+
+fun mmain(num1:Int,num2:Int){
+    val num3=num1.rem(num2)
+    println("remeinder $num3 - $num1 is divided by $num2" )
+}
+fun main(){
+    mmain(24,5)
+    mmain(26,3)
+}
+
+//Return Values in Kotlin
+
+fun mymain(num1:Int,num2:Int):Int{
+	val num3=num1+num2
+    return num3
+}
+fun main(){
+val calling =mymain(23,24)
+val b=mymain(2,4)
+println(calling)
+print(b)
+
+//Shorter Syntax for Return Values
+
+fun mymain(num1:Int=45,num2:Int=9)=num1+num2
+fun main(){
+println(mymain(5,6))  //11
+println(mymain(7))    //16
+println(mymain(0,5)) //5
+println(mymain())    //54
+}
+
+//Multiple Parameters
+
+fun multiparameter(val1:String="Anjali",age1: Int=19,val2:String="Kumari") :String {
+return "My name is $val1 $val2 and i am $age1"}
+fun main(){
+    println(multiparameter())
+}
+
+//Kotlin Recursion
+
+fun callme(n:Int){
+    println(n)
+    if(n<10) callme(n+1)
+    
+}
+fun main(){
+    callme(1)  //12345678910
+}
+
+//Factorial of a number by recursion
+
+fun Fact(num: Int): Int {
+    if (num <= 1) {
+        return 1 
+    }
+    return num * Fact(num - 1) 
+}
+
+fun main() {
+    println("Factorial of 5 is: " + Fact(5))
+}
+
+//Classes and Objects in Kotlin
+class StudentsName{
+    var name1="Anjali"
+    var name2="Shabnam"
+    var name3=""
+    var name4=""
+    
+}
+fun main(){
+    var s1=StudentsName()
+    s1.name3="Kumari"
+    s1.name4="Thakur"
+    println("${s1.name1} ${s1.name3}")
+    println("${s1.name2} ${s1.name4}")
+}
+
+//Multiple Objects in Kotlin
+
+class StudentsName{
+    var name1=""
+    var name2=""
+    var name3=""
+    var name4=""
+    
+}
+fun main(){
+    var s1=StudentsName()
+    s1.name1="Anjali"
+    s1.name2="Shabnam"
+    s1.name3="Kumari"
+    s1.name4="Thakur"
+    var s2=StudentsName()
+    s2.name1="Rd"
+    s2.name3="Arya"
+    s2.name2="Gunjan"
+    s2.name4="Thakur"
+    
+    println("${s1.name1} ${s1.name3}")
+    println("${s1.name2} ${s1.name4}")
+    println("${s2.name1} ${s2.name3}")
+    println("${s2.name2} ${s2.name4}")t
+}
+
+}
+
+
+
+
+
